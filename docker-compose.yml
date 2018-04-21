@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  program:
+    image: node:8.11.1-alpine
+    hostname: program
+    volumes:
+      - yarn:/root/.cache/yarn
+      - ./:/usr/src/app
+    user: node
+    working_dir: /usr/src/app
+    command: yarn run start
+
+volumes:
+  yarn:

@@ -1,0 +1,46 @@
+{
+  "name": "test-bloomon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "tdd": "jest tests/unit --watch",
+    "test:unit": "jest tests/unit",
+    "start": "node ./src/index start ./example.stream",
+    "format": "npm run format:src && npm run format:test",
+    "format:src": "prettier-eslint \"src/**/*.js\" --write && prettier-eslint \"src/**/*.json\" --write --parser=json",
+    "format:test": "prettier-eslint \"tests/**/*.js\" --write && prettier-eslint \"tests/**/*.json\" --write --parser=json"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "modulePaths": [
+      "<rootDir>",
+      "<rootDir>/src"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "dependencies": {
+    "commander": "^2.15.1",
+    "lodash": "^4.17.5"
+  }
+}

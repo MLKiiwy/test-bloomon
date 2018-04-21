@@ -18,7 +18,7 @@ Also the program is not using async function, because we have only one stream an
 
 If you try to execute a lint (eslint) on the code, there are some bad practice I use for simplifying this test (param reassign, ...)
 
-If you have any question, please put comments in the PR.
+If you have any questions, please open issues.
 
 ## Requirements
 
